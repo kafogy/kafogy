@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kwaku Amoako Fosu-Gyeabour | Administrative Officer</title>
+<meta name="description" content="Personal website of Kwaku Amoako Fosu-Gyeabour, Administrative Officer with 10 years of experience and graduate student in Technology at Eastern Illinois University.">
+<style>
+  :root {
+    --bg: #f8f7f3;
+    --surface: #ffffff;
+    --ink: #1f2a2b;
+    --muted: #5b6767;
+    --line: #dcdcd4;
+    --accent: #0f5c5a;
+    --accent-soft: #e3efee;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; margin: 0; }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  header.site {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(248, 247, 243, 0.94);
+    border-bottom: 1px solid var(--line);
+  }
+  nav {
+    max-width: 62rem; margin: 0 auto; padding: 0.85rem 1.25rem;
+    display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; align-items: center; justify-content: space-between;
+  }
+  nav .brand { font-family: Georgia, serif; font-weight: bold; color: var(--ink); text-decoration: none; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+  nav ul a { color: var(--muted); text-decoration: none; font-size: 0.95rem; }
+  nav ul a:hover { color: var(--accent); text-decoration: underline; }
+
+  main { max-width: 62rem; margin: 0 auto; padding: 0 1.25rem; }
+
+  .hero { padding: 4.5rem 0 3rem; border-bottom: 1px solid var(--line); }
+  .hero h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: -0.01em; max-width: 16ch; }
+  .hero .role { font-size: 1.25rem; color: var(--accent); margin: 1rem 0 0.5rem; font-weight: 600; }
+  .hero p { max-width: 40rem; color: var(--muted); margin: 0.5rem 0 0; }
+  .hero .actions { margin-top: 1.75rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .btn {
+    display: inline-block; padding: 0.65rem 1.25rem; border-radius: 4px;
+    text-decoration: none; font-weight: 600; border: 2px solid var(--accent);
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.primary:hover { background: #0b4746; border-color: #0b4746; }
+  .btn.secondary { color: var(--accent); }
+  .btn.secondary:hover { background: var(--accent-soft); }
+
+  section { padding: 3rem 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 11rem 1fr; gap: 1.5rem 2.5rem; }
+  section:last-of-type { border-bottom: none; }
+  section > h2 { font-size: 1.5rem; color: var(--accent); }
+  .content > *:first-child { margin-top: 0; }
+  .content p { margin: 0 0 1rem; max-width: 42rem; }
+
+  .entry { margin-bottom: 2rem; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry h3 { font-size: 1.2rem; }
+  .entry .org { color: var(--muted); margin: 0.15rem 0 0; }
+  .entry .dates { color: var(--accent); font-weight: 600; font-size: 0.95rem; margin: 0.25rem 0 0.6rem; }
+  .entry ul { margin: 0; padding-left: 1.2rem; max-width: 44rem; }
+  .entry li { margin-bottom: 0.35rem; }
+
+  .timeline { border-left: 3px solid var(--accent-soft); padding-left: 1.5rem; }
+  .timeline .entry { position: relative; }
+  .timeline .entry::before {
+    content: ""; position: absolute; left: -1.95rem; top: 0.5rem;
+    width: 0.75rem; height: 0.75rem; border-radius: 50%;
+    background: var(--accent); border: 2px solid var(--bg);
+  }
+
+  .subhead { font-size: 1.05rem; margin: 2.5rem 0 0.75rem; }
+  .plain-list { margin: 0; padding-left: 1.2rem; }
+  .plain-list li { margin-bottom: 0.4rem; }
+
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; }
+  .skill-group { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1.1rem 1.25rem; }
+  .skill-group h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .skill-group ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+
+  .contact-list { list-style: none; margin: 0; padding: 0; }
+  .contact-list li { display: grid; grid-template-columns: 7rem 1fr; gap: 0.5rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+  .contact-list li:last-child { border-bottom: none; }
+  .contact-list .label { color: var(--muted); }
+
+  footer { max-width: 62rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); }
+
+  @media (max-width: 720px) {
+    section { grid-template-columns: 1fr; gap: 1rem; padding: 2.25rem 0; }
+    .hero { padding-top: 3rem; }
+    .contact-list li { grid-template-columns: 1fr; gap: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav aria-label="Main">
+    <a class="brand" href="#top">K. A. Fosu-Gyeabour</a>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <h1>Kwaku Amoako Fosu-Gyeabour</h1>
+    <p class="role">Administrative Officer &amp; Graduate Student in Technology</p>
+    <p>Ten years of experience running administrative operations, coordinating teams, and supporting technology-driven public service. Based in Charleston, Illinois.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn secondary" href="#experience">View experience</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content">
+      <p>I am an administrative officer with 10 years of experience streamlining processes and operations. I enjoy building organized, supportive environments where teams can do their best work and organizations can reach their goals.</p>
+      <p>I coordinate meetings, events, and activities across multiple departments, and I use data analysis tools such as Excel and SPSS to improve results and productivity. From 2018 to 2025 I managed the administrative department for the Electoral Commission of Ghana in the Central Region, supporting voter registration, training, and national elections.</p>
+      <p>I am now pursuing an MS in Technology at Eastern Illinois University. Outside of work, I write poetry, mentor students, and advocate for gender equality and inclusion.</p>
+      <p><strong>Interests:</strong> Information Technology, Administration and Management, Public Sector Administration, Management Information Systems, Data Analysis, Research.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content">
+      <div class="entry">
+        <h3>MS in Technology</h3>
+        <p class="org">Eastern Illinois University, Charleston, IL, USA</p>
+        <p class="dates">January 2026 – May 2028 (expected)</p>
+        <ul>
+          <li>Courses: Global Technology, Total Quality Systems, Advanced Database Technology, Technology of Leadership.</li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Bachelor of Management Studies</h3>
+        <p class="org">University of Cape Coast, Cape Coast, Ghana</p>
+        <p class="dates">August 2010 – May 2014</p>
+        <ul>
+          <li>Courses: Principles of Management, Management Information Systems (1 &amp; 2), Information Literacy, Quantitative Methods, Commercial and Company Law.</li>
+          <li>Project: <em>The Influence of Corporate Governance on Corporate Social Responsibility: A Case Study of AngloGold Ashanti Ghana Limited.</em></li>
+        </ul>
+      </div>
+      <div class="entry">
+        <h3>Senior High School, Business</h3>
+        <p class="org">University Practice Senior High School, Ghana (WAEC)</p>
+        <p class="dates">September 2006 – May 2010</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="content">
+      <div class="timeline">
+        <div class="entry">
+          <h3>Regional Administrator</h3>
+          <p class="org">Electoral Commission of Ghana, Central Regional Office, Cape Coast</p>
+          <p class="dates">October 2018 – June 2025</p>
+          <ul>
+            <li>Managed the day-to-day work of the regional Administrative Department and scheduled executive meetings.</li>
+            <li>Introduced a dual filing system to improve accuracy and control across all districts in the region.</li>
+            <li>Planned logistics for voter registration, voter register exhibitions, gender and disability training, and presidential and parliamentary elections.</li>
+            <li>Maintained 22 district offices and official vehicles through scheduled care and monitoring.</li>
+            <li>Trained District Electoral Officers and temporary election staff on the Voter Management System (VMS), Biometric Verification Devices (BVDs), and other IT devices.</li>
+            <li>Oversaw IT systems for voter registration, results transmission, and data integrity, and gave real-time technical support during elections.</li>
+            <li>Coordinated with political parties, international partners, and the public on policy matters.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h3>Administrator</h3>
+          <p class="org">Ceciyaa Foundation, a non-profit serving disadvantaged women and children in rural Ghana</p>
+          <p class="dates">June 2016 – July 2017</p>
+          <ul>
+            <li>Handled internal and external correspondence and managed office facilities.</li>
+            <li>Supervised clerical staff, coordinated meetings, and kept records and logistics.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h3>Project Trainer</h3>
+          <p class="org">Youth Empowerment Synergy Ghana (YES Ghana), with the University of Cape Coast Business School, MasterCard Foundation, and Global Communities</p>
+          <p class="dates">September 2015 – May 2016</p>
+          <ul>
+            <li>Coached young people aged 17–24 in entrepreneurship, financial literacy, life balance, and work readiness.</li>
+            <li>Helped strengthen traditional apprenticeship models and advocated for young women in the construction industry.</li>
+            <li>Exceeded targets: reached 30% female participation against an initial goal of 10%.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h3>Administrative Assistant and P.A. to the Founding Dean</h3>
+          <p class="org">Faculty of Law, University of Cape Coast (National Service)</p>
+          <p class="dates">July 2014 – August 2015</p>
+          <ul>
+            <li>Managed the Dean's calendar, meetings, and travel, and handled filing, memos, and correspondence.</li>
+            <li>Supported legal events including conferences, Bar Association meetings, and the Law Students' Roll Call.</li>
+            <li>Conducted legal research for academic and private practice.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="subhead">Teaching</h3>
+      <ul class="plain-list">
+        <li>ICT Teacher, Phanerosis International School: prepared lessons and tutorials, managed the classroom, and served as Parent Teacher Association coordinator.</li>
+      </ul>
+
+      <h3 class="subhead">Community and volunteer work</h3>
+      <ul class="plain-list">
+        <li>Gender and Disability Coordinator, Electoral Commission of Ghana: ran programs promoting women's participation and an inclusive electoral process.</li>
+        <li>Service Personnel Support Coordinator, National Service Personnel Association: supported and advised national service personnel and organized skills workshops.</li>
+        <li>Academic and Career Mentor, University of Cape Coast Business Students' Association.</li>
+        <li>Hall Monitor and Peer Mentor, Kwame Nkrumah Hall, University of Cape Coast (2011–2013).</li>
+        <li>International Students Coordinator, Springfield City Church.</li>
+      </ul>
+
+      <h3 class="subhead">Writing and recognition</h3>
+      <ul class="plain-list">
+        <li>Published author of <em>My Book of Poetry</em> and contributor to <em>Go to the Ant</em>.</li>
+        <li>Poems featured by the <a href="https://americandiversityreport.com/born-ghanaianpoem-by-kwaku-amoako-fosu-gyeabour/">American Diversity Report</a> and in the 2012 London Olympic Giant Relay Poem with the Young Poetry Network.</li>
+        <li>Awards: Best Volunteer Trainer (YES Ghana), Best SRC Rep 2012 (Kwame Nkrumah Hall), and UCC Business Students Association Award 2012/2013.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="content">
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Administration</h3>
+          <ul>
+            <li>Office and team management</li>
+            <li>Meeting and event coordination</li>
+            <li>Records and logistics</li>
+            <li>Training and capacity building</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Technology and data</h3>
+          <ul>
+            <li>Excel and IBM SPSS</li>
+            <li>MS Office Suite and Google Workspace</li>
+            <li>Joomla (content management)</li>
+            <li>Data analysis and research</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Personal strengths</h3>
+          <ul>
+            <li>Communication and interpersonal skills</li>
+            <li>Leadership</li>
+            <li>Planning and time management</li>
+            <li>Critical thinking and academic writing</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Advocacy</h3>
+          <ul>
+            <li>Gender equality</li>
+            <li>Youth development</li>
+            <li>Human rights</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul>
+            <li>English (proficient)</li>
+            <li>Akan: Twi and Fante (proficient)</li>
+            <li>French (beginner)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="content">
+      <p>I am open to conversations about administrative, technology, and research opportunities. The best way to reach me is by email.</p>
+      <ul class="contact-list">
+        <li><span class="label">University email</span><a href="mailto:kafosugyeabour@eiu.edu">kafosugyeabour@eiu.edu</a></li>
+        <li><span class="label">Personal email</span><a href="mailto:kafogy@gmail.com">kafogy@gmail.com</a></li>
+        <li><span class="label">Phone</span><a href="tel:+14472266175">+1 (447) 226 6175</a></li>
+        <li><span class="label">Location</span>Charleston, Illinois, USA</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2026 Kwaku Amoako Fosu-Gyeabour
+</footer>
+
+</body>
+</html>
